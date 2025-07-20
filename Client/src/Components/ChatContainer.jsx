@@ -39,7 +39,7 @@ const ChatContainer = () => {
 
     const reader = new FileReader();
     reader.onloadend = async () => {
-      await sendMessages({ image: reader.result }); // ✅ use sendMessages, not server import
+      await sendMessage({ image: reader.result }); // ✅ use sendMessages, not server import
       e.target.value = "";
     };
     reader.readAsDataURL(file);
